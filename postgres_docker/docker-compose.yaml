@@ -1,0 +1,14 @@
+services:
+  postgres_db:
+    image: postgres
+    ports:
+      - 5433:5432
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: coderslab
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+
+volumes:
+  postgres:
